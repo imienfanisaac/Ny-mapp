@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="SV">
+<head>
+    <title>Stiliga Högtidskläder</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/structure.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/site-nav.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/member-nav.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c2296859bb.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <div id="member-nav" class="member-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a>
+            <h5>DASHBOARD</h5>
+            <i class="fa fa-file-text-o"></i>
+        </a>
+        <a href="#">
+            <h5>CUSTOMER</h5>
+            <i class="fa fa-file-text-o" ></i>
+        </a>
+        <a href="#">
+            <h5>RENTAL </h5>
+            <i class="fa fa-file-text-o"></i>
+        </a>
+        <a href="#">
+            <h5>CHANGES (TAILORING)</h5>
+            <i class="fa fa-file-text-o"></i>
+        </a>
+        <a href="#">
+            <h5>SALES </h5>
+            <i class="fa fa-file-text-o"></i>
+        </a>
+        <a href="#">                
+            <h5>PACKING LIST</h5>
+            <i class="fa fa-file-text-o"></i>
+        </a>
+        <a  href="#" class="admin-child">
+            <h5>ADMIN </h5><i id="fa" class="fa fa-angle-down" style="padding-left: 10vh;"></i>
+           <i class="fa fa-database"></i></span> 
+        </a>
+        <div class="admin-parent">
+            <a>
+                <h6>BRAND</h6>
+                <i class="fa fa-database" ></i>
+            </a>
+            <a>
+                <h6>TYPE</h6>
+                <i class="fa fa-database" ></i>
+            </a>
+            <a>
+                <h6>MODIFICATION</h6>
+                <i class="fa fa-database" ></i>
+            </a>
+            <a>
+                <h6>PRODUCT</h6>
+                <i class="fa fa-database" ></i>
+            </a>
+            <a>
+                <h6>EMPYOYEE</h6>
+                <i class="fa fa-database" ></i>
+            </a>
+            <a>
+                <h6>Edit Isurance</h6>
+                <i class="fa fa-edit"></i>
+            </a>
+        </div>
+    </div><!--end/member-nav-->
+
+    <div id="mast-container">
+        <div id="mast-container_inner">
+            <div id="member-nav_sidebar">
+                <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div><!--end/#member-nav_sidebar-->
+            <div id="mast-structure">
+                <header> 
+                    <nav class="site-nav">
+                        <div class="site-nav_inner">
+                            <div id="header2">
+                                <div id="admin" class="dropdown">
+                                    <button onclick="myFunction()" class="dropbtn">
+                                        <!-- <i class="fa-solid fa-circle-info"></i>
+                                        <p>Help</p> -->
+                                        
+                                    <p id="adminp">Admin</p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    
+                                    </button>
+                                    <div id="myDropdown" class="dropdown-content"> 
+                                        <a id="lin" href="index.html">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        Sign Out</a>
+                                    </div> 
+                                </div>
+                            </div>  
+                        </div>
+                    </nav>
+                </header>
+                <main>
+                    <div class="wrapper">
+                        <h2 id="first-title">Rental</h2>
+                        
+                            <div class="forms">
+                                <div class="person-info">
+                                    <form id="personal">
+                                    <p id="personal-info" class="rubrik">PERSONAL INFORMATION</p>  
+                                    
+                                    <div class="controls">
+                                        <input type="text" name="personidentity" id="personummer" placeholder="PERSON IDENTITY" class="form-control" size="35" required3="">
+                                    </div>
+                                    <div class="name">
+                                        <input type="text" name="firstname" id="fname" placeholder="FIRST NAME" class="form-control" required3="" size="14">
+                                        <input type="text"  name="lastname" id="lname" placeholder="LAST NAME" class="form-control" maxlength="10" required3="" size="14">
+                                    </div>
+                                    <div class="email">
+                                        <input type="text" name="email" placeholder="EMAIL ADDRESS" class="form-control" required3="" size="35">
+                                        <span class="inputs">
+                                            <select class="cs-select" tabindex="-1" >
+                                                <option data-mailcode="no-value" value selected>Custom</option>
+                                                <option value="@gmail.com">@gmail.com</option>
+                                                <option value="@hotmail.com">@hotmail.com</option>
+                                                <option value="@live.com">@live.com</option>
+                                                <option value="@yahoo.com">@yahoo.com</option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                    <div class="phone">
+                                        <input type="text" name="phone" id="phone" placeholder="PHONE" class="form-control" required3="" size="35">
+                                    </div>
+                                    </form>
+                                </div> <!--End-personal-info-->
+                                <div id="address-info">
+                                <form class="address">
+                                    
+                                    <div class="limit">
+                                        <p class="rubrik">ADDRESS</p>
+                                    <!-- <form id="add"> -->
+                                        <div class="controls">
+                                            <input type="text" name="address" placeholder="ADDRESS" class="form-control" id="addres" required3="" size="35">
+                                        </div>
+                                        <div class="comp-add">
+                                            <input type="text" id="code" name="zipcode" placeholder="ZIP CODE" class="form-control" required3="" size="14">
+                                            <input type="text" name="city" placeholder="CITY" class="form-control" required3="" size="14">
+                                        </div>
+                                    <!-- </form> -->
+                                    </div>
+                                </div><!--End-Address info-->
+                                <div class="customer-size"><!--Start-Customer-size-->  
+                                <div class="linit">
+                                    <p class="rubrik">CUSTOMER SIZE</p>
+                                    <form id="cus-size">
+                                        <div class="controls">
+                                            <input type="text" name="waist" placeholder="WAIST" class="form-control" required3="">
+                                        </div>
+                                        <div class="controls">
+                                            <input type="text" name="panty-measure" placeholder="PANTY MEASURE" class="form-control" required3="">
+                                        </div>
+                                        <div class="controls">
+                                            <input type="text" name="sleeves" placeholder="SLEEVES" class="form-control" required3="">
+                                        </div>
+                                        <button id="CustomerUpdateButton" type="button" onClick="update()" class="btn btn-success">Update</button>    
+                                        <input type="hidden" id="customerId" name="customerId" value="">
+                                        <p class="hide" id="customerUpdateResult"></p>
+                                    </form>
+                                </div>
+                                <div class="delayedTimes">
+                                    <h2>Delayed Antall times</h2>
+                                    <div class="timeRow">
+                                        Rental:
+                                    </div>
+                                    <div class="timeRow">
+                                        Changes:
+                                    </div>
+                                    <div class="timeRow">
+                                        Sales:
+                                    </div>
+                                    <div class="timeRow">
+                                        Deleted:
+                                    </div>
+                                    <div class="detailedCustomerInformation">
+                                        <p id="detail">Detailed Customer Information:</p>
+                                        <p id="notesInfo">No Notes</p>
+                                    </div>
+                                </div>
+                                </div><!--End-Customer-size-->
+                            
+                            </div>
+                        
+                        <form action="/" method="post" id="OrderForm">
+                            <section class="admin">
+                                <label>SELLER</label>
+                                <select name="seller" id="admin">
+                                    <option selected="selected" value="2">Admin</option>
+                                    <option value="3">Please select</option>
+                                    <option value="3">Extra</option>
+                                    <option value="4">Mudzail</option>
+                                    <option value="3">Nevzet</option>
+                                    <option value="5">Necnie</option>
+                                    <option value="6">Ymet</option>
+                                </select>
+                            </section> 
+                            <section  class="tableResponsive" >
+                                <table id="tableResponsive">
+                                    <thead>
+                                        <tr>
+                                            <th>DELETE</th>
+                                            <th>BRAND</th>
+                                            <th>TYPE</th>
+                                            <th>SIZE</th>
+                                            <th>SPECIFICATION</th>
+                                            <th>PRICE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" class="BoxCheck" >
+                                            </td>
+                                            <td>
+                                                <select name="brand" class="brands" id="brands" required>
+                                                    <option value="0">Please select</option>
+                                                    <option data-area="rental" value="11">BrÃ¶llopskostym</option>
+                                                    <option data-area="rental" value="9">BrÃ¶llopsvÃ¤st</option> 
+                                                    <option data-area="rental" value="60">BrÃ¶llopvÃ¤st Barn</option>
+                                                    <option data-area="rental" value="33">BrÃ¶stknappar Guld</option>
+                                                    <option data-area="rental" value="32">BrÃ¶stknappar Silver</option>
+                                                    <option data-area="rental" value="39">Fluga</option>
+                                                    <option data-area="rental" value="40">Fluga &amp; GÃ¶rdel</option>
+                                                    <option data-area="rental" value="63">Fodral</option>
+                                                    <option data-area="rental" value="18">Frack Barn</option>  
+                                                    <option data-area="rental" value="15">Frack Klassik</option>
+                                                    <option data-area="rental" value="7">Frack Slim</option>
+                                                    <option data-area="rental" value="38">Frackfluga</option>
+                                                    <option data-area="rental" value="23">Frackskjorta</option>
+                                                    <option data-area="rental" value="25">Frackskjorta Barn</option>
+                                                    <option data-area="rental" value="30">FrackvÃ¤st Barn</option>
+                                                    <option data-area="rental" value="29">FrackvÃ¤st Svart</option>
+                                                    <option data-area="rental" value="28">FrackvÃ¤st Vit</option>
+                                                    <option data-area="rental" value="12">Frockcoat</option>
+                                                    <option data-area="rental" value="31">Hatt</option>
+                                                    <option data-area="rental" value="46">HÃ¤ngslen Svart</option>
+                                                    <option data-area="rental" value="45">HÃ¤ngslen Vit</option>
+                                                    <option data-area="rental" value="21">Jaquette</option>
+                                                    <option data-area="rental" value="20">Jaquette Barn</option>
+                                                    <option data-area="rental" value="19">Kostym Barn</option>
+                                                    <option data-area="rental" value="16">Kostym Klassik</option>
+                                                    <option data-area="rental" value="8">Kostym Navy Slim</option>
+                                                    <option data-area="rental" value="5">Kostym Svart Slim</option>
+                                                    <option data-area="rental" value="43">Kravatt</option>                  
+                                                    <option data-area="rental" value="44">Kravatt &amp; NÃ¤sduk</option>                  
+                                                    <option data-area="rental" value="13">Lackskor</option>                  
+                                                    <option data-area="rental" value="35">Manschettknappar Guld</option>                  
+                                                    <option data-area="rental" value="34">Manschettknappar Silver</option>                  
+                                                    <option data-area="rental" value="42">NÃ¤sduk</option>                  
+                                                    <option data-area="rental" value="62">SkopÃ¥se</option>                 
+                                                    <option data-area="rental" value="37">Slips Svart </option>            
+                                                    <option data-area="rental" value="36">Slips Vit</option>         
+                                                    <option data-area="rental" value="17">Smoking Barn</option>                  
+                                                    <option data-area="rental" value="14">Smoking Klassik</option>                  
+                                                    <option data-area="rental" value="6">Smoking Slim</option>                  
+                                                    <option data-area="rental" value="10">Smokingkavaj Vit</option>                  
+                                                    <option data-area="rental" value="22">Smokingskjorta</option>                  
+                                                    <option data-area="rental" value="24">Smokingskjorta Barn</option>                  
+                                                    <option data-area="rental" value="26">Vanlig Skjorta</option>                  
+                                                    <option data-area="rental" value="27">Vanlig Skjorta Barn</option>
+                                                </select>       
+                        
+                                            </td>
+                                            <td>                                        
+                                                <select name="type" class="brandType" id="type" disabled>
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">type 1</option>
+                                                    <option value="2">type 2</option>
+                                                    <option value="3">type 3</option>
+                                                    <option value="4">type 4</option>
+                                                </select>
+            
+                                                
+                                            </td>
+                                            <td>                                        
+                                                <select name="size" class="typeSize" id="size" disabled>
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">type 1</option>
+                                                    <option >Choose</option><option value='yes' >Yes</option><option value='no'>No</option>
+                                                    <option value="2">type 2</option>
+                                                    <option value="3">type 3</option>
+                                                    <option value="4">type 4</option>
+                                                </select>
+                                                
+                                            </td>
+                                            <td>
+                                                <textarea  name="specification" id="specification"></textarea>
+                                            </td>
+                                            <td>
+                                                <input name="price"  type="number" id="price" required>
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td><button type="button" onclick="addRow()">ADD ROW</button></td>
+                                            
+                                            <td><button type="button" id="remove" >DELETE ROW</button></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <h4>Insurance</h4>
+                                              
+                                                <input type="radio"  name="insurance" class="insurance" value=0>+ 0 sek<br>                                                                                          
+                                                <input type="radio" name="insurance" class="insurance" value=200>+ 200 sek <br>                                                                             
+                                                <input type="radio" name="insurance" class="insurance" value=300>+ 300 sek <br>
+                                                <!-- <input type="number" name="insurance" class="insurance" value="">  -->
+                                                
+                                                
+                                            </td>
+                
+                                            <td>
+                                                <label>Total Product (sek)</label>
+                                                <input name="totalPrice" type="number" id="totalPrice" required>
+                                    
+                                            </td>
+                                        </tr>
+                                    </tfoot>    
+                                </table>
+                            </section>
+                            <section class="payment">
+                                <content>
+                                    <span>
+                                        <label for="">IS PAID IN ADVANCE</label>
+                                        <input type="number" name="advancePayment" id="advancePayment" required>
+                                        
+                                    </span>
+                                    <span>
+                                        <label for="">REMAINS TO BE PAID</label>
+                                        <input type="number" name="remainingPayment" id="remainingPayment" required>
+                                       
+                                    </span>
+                                    <span>
+                                        <label for="">PAYABLE NO LATER THAN</label>
+                                        <input type="date" name="lastdaypayable" id="lastDayPayable" required>
+                                        
+                                    </span>
+                                    <span>
+                                        <label for="">TOTAL TO PAY</label>
+                                        <input type="number" name="totalSum" id="totalSum">
+                                    </span>
+                                    
+                                </content>
+                                <content>
+                                    <span>
+                                        <label for="">RETRIEVED DATE</label>
+                                        <input type="date" name="retrievedDate" id="retrievedDate" required>
+                                       
+                                    </span>
+                                    <span>
+                                        <label for="">RETURNS DATE</label>
+                                        <input type="date" name="" id="returnDate" required>
+                                       
+                                    </span>
+                                    <span>
+                                        <label for="">CANCELLATION FEE</label>
+                                        <input type="number" name="cancellationfee" id="cancellationFee" placeholder="">
+                                    </span>
+                                    <span>
+                                        
+                                    </span>
+                                </content>
+                    
+                            </section>
+                            <section id="newSec" class="tokenSection"></section>
+                            <section class="lastBox">
+                                <button><i class="fa fa-user" ></i> Email</button>
+                                <a href="#" ><i class="fa fa-print"></i><p> PRINT RECEIPT</p></a>
+                                <a href="#" ><i class="fa fa-print" ></i><p>TAILORING ORDERS</p> </a>
+                                <button  id="createOrder" type="button" class="createOrder" onclick="SkapaOrder()"><i class="fa fa-database"></i><p>Create Order</p></button>
+                                <button id="update" onclick="updateNow()" type="button">Update Order</button>
+                            </section>
+                            <p id="updateMessage"></p>
+                        </form>
+                        
+                    </div> 
+                </main>  
+                <footer>(C) 2022</footer>
+            </div><!--end/#mast-structure-->
+        </div><!--end/#mast-container_inner-->
+    </div><!--end/#mast-container-->
+
+    <script src="scripts/js/site-nav.js"></script>
+    <script src="scripts/js/member-nav.js"></script>
+    <script src="scripts/js/rental.js"></script>
+    
+</body>
+</html>

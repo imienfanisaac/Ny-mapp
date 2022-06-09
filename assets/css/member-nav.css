@@ -1,0 +1,82 @@
+.member-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    padding-top: 82px;
+    background: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1;
+  }
+.member-nav a {
+    display: inline-flex;
+    padding: 17px 17px 17px 32px;
+    width: 100%;
+    text-decoration: none;
+    color: #818181;
+    transition: 0.3s;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(229, 226, 226);
+    background-color: #111
+}
+.member-nav a:hover {
+    color: #f1f1f1;
+    background-color: #31313992;
+}
+.member-nav a:focus {
+  background-color: #49496068;
+  color: #fff;
+}
+.member-nav i {
+  font-size: 90%;
+}
+.member-nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+    font-size: 36px;    
+} 
+
+
+.member-nav a h5{
+    font-size: 1.8vh;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-weight: 100;
+}
+
+#fa {
+    transition: transform .2s;
+
+}
+  
+#fa.active {
+    transform: rotateX(180deg);
+}
+
+.admin-parent {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-parent a h6 {
+  font-size: 1.8vh;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-weight: 100;
+}
+
+
+@media screen and (max-height: 450px) {
+    .member-nav {padding-top: 15px;}
+    .member-nav a {font-size: 18px;}
+}

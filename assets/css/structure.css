@@ -1,0 +1,585 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #fff;  
+    transition: background-color .5s;
+}
+
+/*main-grid*/
+#mast-container {
+    /*margin: 0 auto;*/
+    transition: margin-left .5s;
+}
+#mast-container_inner {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "member-nav_sidebar mast-structure";
+}
+#member-nav_sidebar {
+    grid-area: member-nav_sidebar;
+    /*grid-area: 1 / 1 / 2 / 2;*/
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    height: 100vh;
+    padding: 15px 0;
+    background: #f3f3f3;
+}
+#mast-structure {
+    grid-area: mast-structure;
+    /*grid-area: 1 / 2 / 2 / 3;*/
+    background: #0ff;
+}
+
+header {
+    position: relative;
+    border-bottom: 1px solid #f3f3f3;width: 100%;
+}
+header .site-nav {
+    position: relative;
+}
+header .site-nav_inner .site-nav_logo img {
+    max-width: 100%;
+}
+header .site-nav_inner {
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: flex-end;
+    /*justify-content: space-between;*/
+    width: 100%;
+    margin: 0 auto;
+    /*padding: 1em;*/
+    background: #fff;
+}
+header .site-nav_inner .site-nav_logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+header .site-nav_inner .site-nav_links {
+    flex: 3;
+    padding: 0 35px;
+}
+header .site-nav_inner .site-nav_more {
+    flex: 1;
+    /*background: #1FACE1;*/
+}
+header .site-nav_inner .site-nav_more a {
+    display: block;
+    line-height: 58px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #1FACE1;
+}
+main .slider {
+    height: 450px;
+    background: #222D35;
+}
+
+/* nadas rental css */
+.detailedCustomerInformation{
+    margin-top: 9px;
+    padding-top: 9px;
+    border-top: 1px dashed #989898;
+}
+.forms{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.person-info, #address-info, .customer-size, .limit{
+    width: 33%;
+}
+.name, .comp-add{
+    display: inline-flex;
+}
+#fname, #code{
+    margin-right: 13px;
+}
+#phone{
+    position: relative;
+    bottom: 20px;
+}
+h2{
+    background-color: #f0f0f0;
+}
+#first-title {
+    font-family: 'Montserrat';
+    font-size: 13px;
+    font-weight: 400;
+    color: #7b7d82;
+    padding: 20px;
+}
+.forms{
+    background-color: #ddd9d9;
+}
+.person-info, #address-info, .customer-size{
+    padding: 50px;
+    background-color: #fff;
+}
+p #personal{
+    width: 33.333%;
+}
+#personal-info{
+    display: inline;
+}
+select{
+    width: 70px;
+}
+.inputs{
+    /* height: calc(50px); */
+    min-width: calc(50px);
+    border-radius: 0;
+    border: none;
+}
+.cs-select{
+    position: relative;
+    left: 137px;
+    bottom: 43px;
+    padding: 5px 10px 5px 0;
+    border: 1px solid #ded7d7;
+    width: 85px;
+    height: 34px;
+}
+input{
+    padding: 10px 0;
+}
+.form-control{
+    margin-bottom: 10px;
+    font-size:x-small;
+    font-weight: bold;
+    padding-left: 5px;
+    border: 1px solid;
+    border-color:#ded7d7;
+}
+.rubrik{
+    font-size:small;
+    font-weight: bold;
+}
+#detail{
+    color: red;
+    font-weight: bold;
+}
+#addres{
+    padding: 20px 5px;
+}
+.btn-success{
+    color: #ffffff;
+    background-color: #202020;
+    border-color: #636363;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+#personummer{
+    padding-left: 5px;
+}
+.controls .form-control{
+    padding-left: 5px;
+}
+/* nada header css starts here */
+#header2{
+    /* padding-left: 620px; */
+    display: inline-flex;
+    align-items: flex-end;
+    padding-right: 40px;
+}
+p{
+    padding-top: 15px;
+    /* padding-left: 330px; */
+}
+p{
+    padding-top: 15px;
+    padding-left: 5px;
+}
+#admin{
+    display: inline-flex;
+    padding-top: 13px;
+}
+.dropbtn{
+    display: inline-flex;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F1F1F1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    border: solid 1px grey;
+}
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+}
+.show {
+    display:block;}
+#lin{
+    padding-bottom: 10px;
+    width: 90%;
+    position: relative;
+    top: 5px;
+}
+#myDropdown{
+    margin-top: 30px;
+    padding: 5px;
+} 
+#myDropdown i{
+    position: relative;
+    top: 2px;
+    right: 4px;
+}
+i, #fa-angle-down{
+    padding-top: 15px;
+    padding-left: 5px;
+    
+}
+
+/* sweetsrental css starts here */
+.lastBox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #fff;
+    margin: 2vh 0 0 0;
+    padding: 2vh 0;
+}
+.lastBox button i {
+    font-size: 15px;
+    padding: 0;
+}
+
+.lastBox a i {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+.lastBox a p {
+    text-decoration: underline ;
+    margin-left: 5px;
+    padding: 0;
+}
+.lastBox a p:hover {
+    text-decoration: none ;
+}
+.lastBox a  {
+    text-decoration: none;
+    border: rgb(193, 191, 191) .5px solid;
+    border-radius: 3px;
+    color: #414141;
+    padding: 1vh 2vh ;
+    margin-left: 1vh;
+    font-size: small;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tokenSection {
+    background-color: #fff;
+    margin-top: 2vh;
+    width: 100%;
+
+}
+.tokenSection p {
+    font-size: 12px;
+    padding: 2vh;
+}
+.tokenSection em {
+    color: red;
+    padding-top: 3px;
+}
+.token {
+    display: inline-flex;
+    margin: 1vh;
+    align-items: center;
+}
+.token button {
+    padding: 5px;
+    background-color: black;
+    font-size: small;
+    color: #fff;
+}
+.createOrder  {
+    color: #eeeeee;
+    background-color: black;
+    padding: 1vh ;
+    margin-left: 1vh;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size:small;
+    border-radius: 3px;
+    justify-content: space-around;
+}
+.createOrder p {
+    padding: 0;
+    margin-left: 5px;
+}
+#update {
+    color: #eeeeee;
+    background-color: black;
+    padding: 1vh ;
+    margin-left: 1vh;
+    display: none;
+    align-items: center;
+    font-size: small;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#updateMessage {
+    text-align: center;
+    font-size: medium;
+    padding: 1vh;
+
+    margin: 0;
+}
+.payment {
+    background-color: #fff;
+    margin-top: 2%;
+    height: 30vh;
+    padding: 2vh;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+.payment content {
+    display: inline-flex;
+    width: 100%;
+
+}
+.payment  content label {
+    font-weight:700;
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+main {
+    width: 100%;
+    grid-template-areas: main;
+    height: 100%;
+    background-color: cadetblue;
+}
+
+.wrapper {
+    background-color: #e6e6e6;
+    height: fit-content;
+    padding: 0 2vh;
+    width: 100%;
+}
+span {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 25%;
+
+}
+
+
+span input[type="number"] {
+    padding: 1vh;
+    display: block;
+    border: rgba(186, 184, 184, 0.809) .5px solid;
+    outline: none;
+    border-radius: 3px;
+    width: 90%;
+    resize: vertical;
+
+}
+
+span input[type="date"] {
+    padding: 1vh;
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+    display: block;
+    border: rgba(186, 184, 184, 0.809) .5px solid;
+    outline: none;
+    border-radius: 3px;
+    width: 90%;
+}
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 50%;
+}
+
+span input:focus {
+    background-color: #d5d8d58e;
+}
+.tableResponsive {
+    width: 100%;
+    padding: 15px;
+    margin-top: 4vh;
+    background-color: rgb(255, 255, 255);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    width: 100%;
+    background-color: #fff;
+}
+tr {
+    display:table-row;
+    vertical-align: middle;
+    border-color: inherit;
+    text-align: left;
+    padding: 10px;
+}
+td {
+    text-align: left;
+    padding: 15px 10px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-top: 1px rgb(204, 202, 202) solid;
+    padding:  1vh 0;
+    border-bottom: 1px rgb(204, 202, 202) solid;
+    text-align: left;
+}
+tbody:hover {
+    transform: ease-in-out 2s;
+    background-color: #d5d5d5;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    text-align: left;
+    font-size: small;
+    padding-bottom: 5px;
+}
+th {
+    padding: 5px 10px;
+}
+.tableResponsive input.selected {
+    border-color:lightgreen;
+}
+/* .tableResponsive input[type="checkbox"] {
+    width: 10%;
+} */
+.tableResponsive input[type="text"] {
+    padding: 1vh;
+    display: block;
+    border: rgba(186, 184, 184, 0.809) .5px solid;
+    outline: none;
+    border-radius: 3px;
+    width: 100%;  
+    resize: vertical;
+}
+.tableResponsive textarea {
+    padding: 1vh;
+    display: block;
+    border: rgba(186, 184, 184, 0.809) .5px solid;
+    outline: none;
+    border-radius: 3px;
+    width: 100%;  
+    resize: vertical;
+}
+.tableResponsive input[type="number"]{
+    padding: 1vh;
+    display: block;
+    border: rgba(186, 184, 184, 0.809) .5px solid;
+    outline: none;
+    border-radius: 3px;
+  
+    width: 90%;
+}
+.tableResponsive select {
+    border: .5px rgb(206, 206, 206) solid;
+    width: 100%;
+    outline: none;
+    padding: 1vh;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+
+}
+.tableResponsive button {
+    background-color: black;
+    font-size: small;
+    padding: 1vh;
+    border-radius: 5px;
+    margin-right: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+tfoot {
+    display:table-footer-group;
+    vertical-align: middle;
+    border-color: inherit;
+    font-size: small;
+    width: 100%;
+}
+h4 {
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+.insurance {
+    margin: 10px;
+    cursor: pointer;
+ }
+  
+
+.admin {
+    background-color: #fff;
+    margin-top: 4vh;
+    width: 100%;
+    padding: 2vh;
+}
+.admin label {
+    display: block;
+    width: 100%;
+    font-size: small;
+}
+.admin select {
+    width: 100%;
+    border: rgb(197, 197, 197) .5px solid;
+    padding: 10px;
+    outline: none;
+}
+/* .Error {
+    display: none;
+    font-size: 0.8em;
+    
+}
+  
+.visible {
+    display: block;
+}
+  
+input.invalid {
+    border-color: red;
+} */
