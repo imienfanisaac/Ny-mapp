@@ -91,11 +91,13 @@ function addRow() {
                         </tbody>`
  dynamicElements()
 }
+
 $(document).ready(function () {
     $("#remove").on("click", function () {
         $('table tr').has('input[type="checkbox"]:checked').remove()
     })
 });
+
 function enable() {
     document.getElementById("brands").onchange = function () {
         document.getElementById('type').setAttribute("disabled", "disabled");
@@ -109,6 +111,7 @@ function enable() {
             document.querySelector(".typeSize").removeAttribute("disabled");
         };
 }enable();
+
 function dynamicElements() {
     const getSelect = document.querySelectorAll('select.brands');
     getSelect.forEach(getSingleSelect => {
@@ -122,18 +125,7 @@ function dynamicElements() {
     })
     
 
-    document.querySelector(".brands").onchange = function () {
-        document.querySelector('.brandType').setAttribute("disabled", "disabled");
-        if (brands.value !== 'Please select')
-            document.querySelector('.brandType').removeAttribute("disabled");
-        
-        };
-    document.querySelector(".brandType").onchange = function () {
-        document.querySelector(".typeSize").setAttribute("disabled", "disabled");
-        if (this.value !== 'Please select')
-            document.querySelector(".typeSize").removeAttribute("disabled");
-        };
-    console.log("are you")
+    enable()
 }
 
 
@@ -169,15 +161,15 @@ document.getElementById("remainingPayment").oninput = () => {
     totalSEl.value= parseInt(remainEl.value) + parseInt(advanceEl.value);
 };
 
-function SkapaOrder() {
+function createORDER() {
    
-    let s4 = () => {
+    let signToken = () => {
         return Math.floor((Math.random() +1) * 0x3000)
     }
-    let s5 = (min,max) => {
+    let orderId = (min,max) => {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
     }
-    document.getElementById("updateMessage").innerHTML= `Update with order id ${s5(1800, 1899)} is creating`;
+    document.getElementById("updateMessage").innerHTML= `Update with order id ${orderId(1800, 1899)} is creating`;
     const card= document.querySelector("#newSec")
     let newSection = document.createElement("div");
     newSection.innerHTML= `
@@ -185,7 +177,7 @@ function SkapaOrder() {
     
     <div class="token">
       <button>Klar</button>
-      <p>Order nummer (Token): ${s4()}</p>
+      <p>Order nummer (Token): ${signToken()}</p>
     </div>
     `
     card.append(newSection);  
@@ -193,7 +185,20 @@ function SkapaOrder() {
     document.getElementById("update").style.display="block";
 }
 
-// function tabletMessage() {
+
+
+  
+function updateOrder() {
+    document.getElementById("updateMessage").innerHTML=`Har updateras <i class="fa fa-check-circle"></i>`;
+    document.getElementById("createOrder").style.display="inline-flex";
+    document.getElementById("update").style.display="none";
+    document.getElementById("newSec").style.display="none"
+  
+}
+
+
+
+  // function tabletMessage() {
 //     const card= document.querySelector("#tabletMesg")
 //     let newSection = document.createElement("div");
 //     newSection.innerHTML= `
@@ -209,154 +214,10 @@ function SkapaOrder() {
 //     `
 //     card.append(newSection);
 // }
-
-  
-function updateNow() {
-    document.getElementById("updateMessage").innerHTML=`Har updateras <i class="fa fa-check-circle"></i>`;
-    document.getElementById("createOrder").style.display="inline-flex";
-    document.getElementById("update").style.display="none";
-    document.getElementById("newSec").style.display="none"
-  
-}
-
-// let remainingPaymentEl = document.getElementById("remainingPayment");
-// let advancePaymentEl = document.getElementById("advancePayment");
-// document.getElementById('totalSum').value = (remainingPaymentEl.value + advancePaymentEl.value);
-
-/* function amountPro(){
-    let priceEl = document.getElementById("price");
-    let totalPriceEl = document.getElementById("totalPrice");
-    let insuranceEL = document.getElementsByName('insurance');
-    var amount=0;
-    for (i=0; i<insuranceEL.length; i++) {
-        if (insuranceEL[i].checked) {
-           amount = insuranceEL[i].value;
-            console.log(amount)
-        }
-    }
-    if (priceEl && amount) {
-        totalPriceEl.innerHTML=amount + priceEl;
-    }
-}amountPro() */
-  
-    // var amount = document.querySelector('input[name = insurance]:checked').value;
-    // console.log(amount);
-
-    // let form = document.getElementById("orderForm");
-    // Function to check that the input field is not empty while submitting
-
-    // Event listener that listens for submit event
-    // orderForm.addEventListener("submit", function(e){
-    //     e.preventDefault();
-    // // retrieve values
-    // let sellerEl = document.getElementById("seller").value;
-    // let brandEl = document.querySelector("brands").value;
-    // let typeEl = document.querySelector("type").value;
-    // let sizeEl = document.querySelector("size").value;
-    // let specEl = document.createElement("specification").value;
-    // let priceEl = document.querySelector("price").value;
-    // let insuranceEl = document.querySelector("insurance").value;
-    // let talpriceEl = document.querySelector("totalPrice").value;
-    // let advanceEl = document.querySelector("advancePayment").value;
-    // let remainingEl = document.querySelector("remaining.Payment").value;
-    // let sistadagEl = document.querySelector("lastDayPayable").value;
-    // let totalsumEl = document.querySelector("totalSum").value;
-    // let retrieveEl = document.querySelector("retrievedDate").value;
-    // let returnEl = document.querySelector("returnDate").value;
-    // let cancelfeeEl = document.querySelector("cancellationFee").value;
-    
-    // // validate username and password fields
-    // if( sellerEl=='' || brandEl==''){
-    //         alert("Please Fill all required fields");
-    //     }
-    
-    // if( typeEl=='' || sizeEl==''){
-    //     alert("Please Fill all required fields");
-    // }
-    // if( specEl=='' || priceEl==''){
-    //     alert("Please Fill all required fields");
-    // }
-
-    // if( insuranceEl=='' || brandEl==''){
-    //     alert("Please Fill all required fields");
-    // }
-    // else{
-    //     alert("Form submission successful");
-    // }
-    // if( sellerEl=='' || brandEl==''){
-    //     alert("Please Fill all required fields");
-    // }
-    // else{
-    //     alert("Form submission successful");
-    // }
-
-    // })
-    
-
-//   let fnameEl = document.querySelector("fname");
-//   let lnameEl = document.querySelector("lname");
-//   let emailEl = document.querySelector("email");
-//   let phoneEl = document.querySelector("phone");
-//   let addressEl = document.querySelector("address");
-//   let zipcodeEl = document.querySelector("zipcode");
-//   let cityEl = document.querySelector("city");
-
-
-
-  
-  // //This function is to submit questions. 
-  // const submitQuestion = (question, answers, points) => {
-  //   let ordernum = s5()
-  //   INSERT INTO `order` (`seller`, `isInsurance`, `totalProductAmount`, `totalAmount`,`advancePaid`, `remainsPaid`, `finalPayDate`, `retrivedDate`, `returnsDate`, `cancellationFee`, `waistSize`, `pantySize`, `sleevesSize`)
-  //   VALUES(ordernum, custid, ordertype, sellerid, seller, insurance, totalprice, totalsum, cancellation, advancepayment, remainingpayment, sistadag, retrieved,)
-  //   let submitTime = new Date()
-  //    // Added a new document in collection "quiz"
-  //   db.collection("quiz")
-  //     .add({
-  //       question: question,
-  //       answers: answers,
-  //       points: points,
-  //       date: submitTime, 
-  //     })
-  //     .then((docref) => {
-  //       console.log("Document successfully written with id!", docref.id);
-  //       getData()
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error writing document: ", error);
-  //     });
-  // };
-  
-  
-  
-  //   let insurance = document.getElementById(
-  //     "ques-point fa fa-star star checked"
-  //   ).value;
-  
-  //   // Function to send the new question and answers to db, not active yet
-  //    submitQuestion(question, allAnswers, points);
-  // };
-  
   // // And This event is for resetting the form
   // function resetInfo() {
-  //   questionEl.innerText = "";
-  //   answerOneEl.innerText = "";
-  //   answerTwoEl.innerText = "";
-  //   answerThreeEl.innerText = "";
-  //   pointsEl.innerText = "";
-  // };
-   // let brandField = document.getElementById("brands");
-    // let priceField = document.getElementById("price"); 
-    // let advanceField = document.getElementById("advancePayment");
-    // let remainField = document.getElementById("remainingPayment");
-    // let lastDayPayableField = document.getElementById("lastdaypayable");
-    // let retrievedDateField = document.getElementById("retrievedDate");
-    // let returnsField = document.getElementById("returnDate");
-    
 
-    // if (brandField.value==="Please select") {
-    // let ErrorEl = document.getElementById("brandError");
-    // ErrorEl.innerHTML="Please fill out this field";
-    // }
+  // };
+    
 
 
